@@ -21,6 +21,7 @@ public class LC95_UniqueBinarySearchTrees {
         }
 
         for (int i = lo; i <= hi; i++){
+            // 这里直观意义上很好理解，通过递归算出左右子树，然后再接到根上即可
             List<TreeNode> left = helper(lo, i-1);
             List<TreeNode> right = helper(i+1, hi);
 
