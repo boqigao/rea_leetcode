@@ -16,7 +16,8 @@ public class LC110_Balanced_binary_tree {
         int right = getHeight(node.right);
 
         // 如果左树和右树有一个不是平衡的，那整棵树就是不平衡的
-        if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
+        if (left == -1 || right == -1 ||
+                Math.abs(left - right) > 1) {
             return -1;
         }
 
