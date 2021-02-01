@@ -3,6 +3,9 @@ package tree;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 从上到下的遍历，基本使用回溯
+ */
 public class LC129_SumNumbersOfRootToLeaves {
     public int sumNumbers(TreeNode root) {
         if(root==null) {

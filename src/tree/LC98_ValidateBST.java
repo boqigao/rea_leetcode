@@ -19,6 +19,13 @@ public class LC98_ValidateBST {
         return isBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
+    /**
+     * 这里就判定 root的值是否在允许的区间里面
+     * @param root
+     * @param min
+     * @param max
+     * @return
+     */
     boolean isBST (TreeNode root, long min, long max ) {
         if(root == null) {
             return true;

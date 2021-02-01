@@ -1,5 +1,8 @@
 package tree;
 
+/**
+ * 高度相关的同样问题，见110
+ */
 public class LC104_Maximum_depth_of_binary_tree {
     public int maxDepth(TreeNode root) {
         return maxNodes(root, 0);

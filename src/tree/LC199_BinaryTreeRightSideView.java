@@ -3,12 +3,13 @@ package tree;
 import java.util.*;
 
 /**
- * bfs好像有想法了，就是利用队列一样的？
+ * 这道题有两种解法：1。层序遍历找到每层最后一个节点即可
  *
- * dfs再看一下
+ * 2。
  * dfs：访问顺序，self，right，left
  * 我们要加一个 node的值和level相关结果
  * 按照此访问顺序，每次碰到第一个新level的数字，就是我们要打印的结果
+ * 我们要保证每次碰到新的level就能将它加入，所以level==res.size()
  */
 public class LC199_BinaryTreeRightSideView {
     public List<Integer> rightSideView(TreeNode root) {

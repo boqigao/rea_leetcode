@@ -5,6 +5,10 @@ package tree;
  * 用队列做
  *
  * 另一种就是取到树的高度用递归
+ * 这道题主要就是取到树的高度这个问题，其实他是比较简单的双层递归
+ * 每次递归countNode的时候，也要再次递归左右子树的高度。
+ *
+ * 取到高度以后，即可以计算节点数
  */
 public class LC222_CountCompleteTreeNodes {
     public int countNodes(TreeNode root) {
@@ -16,13 +20,14 @@ public class LC222_CountCompleteTreeNodes {
         if(leftDepth == rightDepth) {
             return (1<<leftDepth) -1;
         } else {
+            // 根节点，左子树的数量，右子树的数量
             return 1 + countNodes(root.left) + countNodes(root.right);
         }
     }
 
     public int leftDepth(TreeNode root){
         int depth = 0;
-        while (root.left!=null){
+        while (root!=null){
             root = root.left;
             depth++;
         }
@@ -31,7 +36,7 @@ public class LC222_CountCompleteTreeNodes {
 
     public int rightDepth(TreeNode root) {
         int depth = 0;
-        while (root.right!=null){
+        while (root!=null){
             root = root.right;
             depth++;
         }

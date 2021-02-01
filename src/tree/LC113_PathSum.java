@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 这道题不是单纯的dfs，应该用回溯的方法做
+// 这道题是非常经典的回溯问题
 public class LC113_PathSum {
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         List<List<Integer>> res = new ArrayList<>();

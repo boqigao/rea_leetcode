@@ -6,6 +6,7 @@ import java.util.Queue;
 // 这道题的核心是bfs
 // 需要一个队列！感觉非常像LC107
 // 先加儿子，然后把根节点pop出来
+// 很基本的层序遍历的问题
 public class LC111_Minimum_depth_of_binary_tree {
     public int minDepth(TreeNode root) {
         if (root == null) {

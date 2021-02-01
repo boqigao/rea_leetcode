@@ -1,5 +1,8 @@
 package tree;
 
+/**
+ * 高度相关的同样问题，见104
+ */
 public class LC110_Balanced_binary_tree {
     public boolean isBalanced(TreeNode root) {
         if (root == null) return true;
