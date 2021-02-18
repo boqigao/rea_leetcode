@@ -19,14 +19,14 @@ public class LC133_CloneGraph {
         while (!queue.isEmpty()) {
             Node cur = queue.poll();
             for(Node nei : cur.neighbors) {
-            if(!map.containsKey(nei)) {
-                map.put(nei, new Node(nei.val, new ArrayList<>()));
-                // 把每个邻居节点加到que中
-                queue.add(nei);
-            }
+                if(!map.containsKey(nei)) {
+                    map.put(nei, new Node(nei.val, new ArrayList<>()));
+                    // 把每个邻居节点加到que中
+                    queue.add(nei);
+                }
 
-            // 把新的邻居节点加到邻居中
-            map.get(cur).neighbors.add(map.get(nei));
+                // 把新的邻居节点加到邻居中
+                map.get(cur).neighbors.add(map.get(nei));
             }
         }
         return newNode;
