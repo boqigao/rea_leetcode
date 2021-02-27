@@ -1,6 +1,6 @@
 package dp;
 
-public class LC211_MaximalSquare {
+public class LC221_MaximalSquare {
     public int maximalSquare(char[][] matrix) {
         /**
          dp[i][j]表示以第i行第j列为右下角所能构成的最大正方形边长, 则递推式为:
@@ -14,6 +14,9 @@ public class LC211_MaximalSquare {
 
         for(int i = 1; i <= m; ++i) {
             for(int j = 1; j <= n; ++j) {
+                /**
+                 * 注意这里只有当matrix[i][j]为1的时候才更新。
+                 */
                 if(matrix[i-1][j-1] == '1') {
                     dp[i][j] = 1 + Math.min(dp[i-1][j-1], Math.min(dp[i-1][j], dp[i][j-1]));
                     max = Math.max(max, dp[i][j]);
