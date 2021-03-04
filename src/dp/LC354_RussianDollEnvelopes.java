@@ -6,6 +6,7 @@ import java.util.Comparator;
 
 /**
  * 这道题的dp[i]的设计，自己本来的确是想对了的，但是思路没做对
+ * dp[i] 表示到第i个信封为止，能装多少信封
  */
 public class LC354_RussianDollEnvelopes {
     public int maxEnvelopes(int[][] envelopes) {
