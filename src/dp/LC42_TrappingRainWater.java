@@ -15,7 +15,7 @@ package dp;
  * _   /  \__/       \___/    \     __
  *  \_/                        \___/
  */
-public class LC42TrappingRainWater {
+public class LC42_TrappingRainWater {
     public int trap(int[] height) {
         int left = 0;
         int right = height.length-1;
